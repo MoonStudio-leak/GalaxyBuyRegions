@@ -1,0 +1,11 @@
+name: GalaxyBuyRegions
+version: 1.2.1 # Modificated version by NaulbiMIX
+author: Galaxy773
+authors:
+  - Galaxy773
+  - NaulbiMIX
+main: ru.galaxy773.buyregions.Main
+softdepend: [Vault, WorldGuard, WorldEdit]
+commands:
+  ndom:
+    aliases: [regions, coinhome, ch, buyregions]

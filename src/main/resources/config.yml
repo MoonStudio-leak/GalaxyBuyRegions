@@ -1,0 +1,175 @@
+BUY_SETTINGS:
+  MAX_PRICE: 5000000
+  MIN_PRICE: 1000
+REGION_CHECK_ITEM:
+  ID: 280
+  NAME: '&aПроверьте регион'
+  LORE:
+    - ''
+    - '&7Предмет для проверки региона.'
+    - ''
+REGION_POSITIONS:
+  NORMAL: '&8В шахте / &a&lОбычный &8/ На высоте'
+  DOWN: '&c&l шахте &8/ Обычный &8/ На высоте'
+  UP: '&8В шахте / Обычный / &6На высоте'
+GUI:
+  VARIABLES:
+    ONLINE: '&a&l[Онлайн]'
+    OFFLINE: '&c&l[Оффлайн]'
+  LOTS:
+    NAME: '&0Продажа регионов » Ваши лоты'
+    REGION_ITEM:
+      NAME: 'Регион: &6{region_display_name}'
+      LORE:
+        - ''
+        - '&cНажмите ПКМ, чтобы убрать регион с продажи'
+        - ''
+        - '&7Цена: &e{region_price}'
+        - '&7Хотите изменить цену? -'
+        - '&a/buyregions price [название_региона] [цена]'
+        - ''
+        - '&7Название региона: &a{region_name}'
+        - '&7Примерные координаты: &e{region_coordinates}'
+        - '&7Положение: {region_position}'
+        - '&7Размещено &a{region_date} &fв &a{region_time} &f(По МСК)'
+        - ''
+        - '&7Изменить описание:'
+        - '&a/ndom edit [название_региона] [описание] &7(256 символов)'
+        - ''
+        - '&6Описание: {region_description}'
+        - ''
+      ID: 358
+  BUYABLE:
+    NAME: '&0Продажа регионов » #{page}'
+    REGION_ITEM:
+      ID: 358
+      NAME: 'Регион: &6{region_display_name}'
+      LORE:
+        - ''
+        - '&7Цена: &e{region_price}'
+        - '&7Продавец:&e {region_owner} {online}'
+        - ''
+        - '&7Название региона: &a{region_name}'
+        - '&7Примерные координаты: &e{region_coordinates}'
+        - '&7Положение: {region_position}'
+        - '&7Размещено &a{region_date} &fв &a{region_time} &f(По МСК)'
+        - ''
+        - '&6Описание от автора: {region_description}'
+        - ''
+  LOTS_ITEM:
+    ID: 395
+    NAME: '&a&lВаша торговая площадка'
+    LORE:
+      - ''
+      - '&9В продаже: &e{player_lots_amount}'
+      - ''
+  INFO_ITEM:
+    ID: 340
+    NAME: '&a&lОбучение'
+    LORE:
+      - ''
+      - '&7В данном меню Вы можете приобрести какой-либо участок или дом.'
+      - '&7Кроме того, Вы можете продать свой при помощи команды:'
+      - '&b/ndom sell [название_региона] [цена] [название_на_рынке]'
+      - ''
+  BACK_ITEM:
+    NAME: '&6<- Предыдущая страница'
+    LORE:
+      - ''
+  NEXT_ITEM:
+    NAME: '&6Следующая страница ->'
+    LORE:
+      - ''
+  CLOSE_ITEM:
+    ID: 394
+    NAME: '&cВыход'
+    LORE:
+      - ''
+TITLES:
+  BACK_REGION: '&cBuyRegions;&fВы убрали регион с продажи'
+  SELL_REGION: '&cBuyRegions;&fВы выставили регион на продажу'
+  SET_DESCRIPTION: '&cBuyRegions;&fВы поменяли описание лоту'
+  SET_PRICE: '&cBuyRegions;&fВы поменяли цену лоту'
+  TELEPORT: '&cBuyRegions;&fВы телепортировались к региону'
+  BUY_REGION: '&cBuyRegions;&fВы приобрели регион'
+  SELL_REGION_SUCCESS: '&cBuyRegions;&fУ вас купили регион'
+  SEND_REQUEST: '&cBuyRegions;&f&lИнформация по покупке в чате'
+MESSAGES:
+  NO_PERMISSIONS: '&f[&cBuyRegions&f] &cУ вас нет прав!&f.'
+  COMMAND_DELETE_USE: '&f[&cBuyRegions&f] &fИспользование - &a/ndom delete [название_региона]&f.'
+  COMMAND_SELL_USE: '&f[&cBuyRegions&f] &fИспользование - &a/ndom sell [название_региона]
+    [цена] [название_на_рынке]&f.'
+  COMMAND_EDIT_USE: '&f[&cBuyRegions&f] &fИспользование - &a/ndom edit [регион] описание&f.'
+  COMMAND_SET_PRICE: '&f[&cBuyRegions&f] &fИспользование - &a/ndom price [регион]
+    цена&f.'
+  REGION_NOT_BUY: '&f[&cBuyRegions&f] &fДанного региона нету на продаже, возможно
+    он был убран с нее&f.'
+  DELETE_REGION: '&f[&cBuyRegions&f] &fВы успешно удалили регион &a{region_name}&f
+    с продажи&f.'
+  PRICE_NOT_CORRECTED: '&f[&cBuyRegions&f] &fВы ввели неккоректную &c&nцену&f, возможно
+    она содержит не цифры или превышает максимальную &7(5000000)&f.'
+  MAX_PRICE: '&f[&cBuyRegions&f] &fВаша цена превышает максимальную &7(5000000)&f.'
+  MIN_PRICE: '&f[&cBuyRegions&f] &fВаша цена ниже минимальной &7(1000)&f.'
+  REGION_IS_BUY: '&f[&cBuyRegions&f] &fДанный регион уже &a&nнаходится&f на продаже&f.'
+  PLAYER_NOT_REGION_OWNER: '&f[&cBuyRegions&f] &fВы &c&nне&r &c&nявляетесь&f владельцем
+    региона, вы должны находиться в том же мире, что и регион&f.'
+  PLAYER_NOT_OWNER: '&f[&cBuyRegions&f] &fВы не являетесь владельцем данного лота&f.'
+  SET_PRICE: '&f[&cBuyRegions&f] &fВы успешно поменяли цену лоту на &a{region_price}&f
+    монет&f.'
+  DESCRIPTION_BIG_LENGTH: '&f[&cBuyRegions&f] &fРазмер описания должен быть не более
+    &a&l256 &fсимволов, вы ввели &c{length}&f.'
+  SET_DESCRIPTION: '&f[&cBuyRegions&f] &fВы успешно поменяли описание лоту.'
+  TELEPORT_CANCELLED: '&6Регионы &8| &fОшибка телепортации, возможно регион был снят
+    с продажи&f.'
+  TELEPORT: '&f[&cBuyRegions&f] &fВы телепортировались к региону &a&l{region_name}
+    ({region_coordinates})&f.'
+  NO_MONEY: '&f[&cBuyRegions&f] &fУ вас недостаточно денег, стоимость региона &a{region_price}&f.'
+  SELL_REGION_SUCCESS: '&f[&cBuyRegions&f] &fУ вас приобрели регион &a&l{region_name}&f.'
+  SELL_REGIONS:
+    - ''
+    - Вы успешно выставили регион на продажу
+    - ''
+    - 'Цена: &a{region_price}'
+    - 'Название: &b{region_name}'
+    - 'Название на рынке: &e{region_display_name}'
+    - ''
+  BUY_REGION:
+    - ''
+    - Вы успешно приобрели регион &a&l{region_name}
+    - 'Координаты: &a{region_coordinates}'
+    - Установите &aточку дома
+    - ''
+  GROUPS_LIMIT: '&f[&cBuyRegions&f] &aВы не можете выставить регион на продажу, превышен
+    лимит &c{player_limit}&a.'
+  BACK_REGION: '&f[&cBuyRegions&f] &aВы убрали регион &a{region_name} &fс продажи.'
+  BUY_OWNING_REGION: '&f[&cBuyRegions&f] &aВы не можете приобрести свой регион.'
+  SEND_REQUEST:
+    - ''
+    - Заинтересовал домик? Телепортируйтесь к нему при помощи команды &c/ndom tp.
+    - 'Забегайте без &aвещей, проверьте &a&lпалкой все части дома, имя привата: &6{region_name}&f.'
+    - 'Если Вы хотите дойти до дома пешком, пожалуйста, его координаты: &a{region_coordinates}'
+    - Чтобы приобрести дом за &e{region_price}&a$&f, напишите команду &c/ndom confirm&f.
+    - ''
+  SELL_REGION:
+    - ''
+    - Вы успешно выставили регион на продажу.
+    - ''
+    - 'Цена: &a{region_price}'
+    - 'Название: &a{region_name}'
+    - 'Название на рынке: &a{region_display_name}'
+    - ''
+  TELEPORT_CANCELED: '&f[&cBuyRegions&f] &fОшибка телепортации, возможно регион был
+    снят с продажи&f.'
+GROUPS_LIMIT:
+  DEFAULT: 3
+  VIP: 5
+  user: 1
+  donor: 2
+  premium: 3
+  creative: 4
+  admin: 5
+  oper: 6
+  oper+: 7
+  sadmin: 8
+  enigma: 9
+  meduse: 10
